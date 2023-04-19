@@ -1,4 +1,4 @@
-# 크롬 익스텐션 간단하게 개발
+# 크롬 익스텐션 간단하게 개발 👨🏻‍🏫
 
 ## 종류
 
@@ -15,13 +15,14 @@
 
 </br>
 
-### 2. Code Injecting Extension
+### 2. Code Injecting Extension 🔫
 - JS, CSS, HTML을 사용해서 현재 동작 중인 웹 페이지의 콘텐츠나 동작을 수정한다.
 - 웹 사이트의 기능을 커스터마이즈 하고 향상 시킬 수 있다!
 - 외부 API 와 결합 가능
 
 
 ### Code Injecting Extension 의 예시 
+1. 웹 사이트의 광고를 차단해줌
 
 [![](https://lh3.googleusercontent.com/vBE5WAb6YXh880SClHGT69j73doSGj3ebygKxS0xdOltNsNpJgXWn1hpnwu0PLE9WLX00-3jPlWVFKPWszvLoomkPe0=w640-h400-e365-rj-sc0x00ffffff)](https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom?hl=ko)
 
@@ -70,7 +71,7 @@
 - `content_scripts` : 실제로 웹페이지에서 실행시킬 스크립트에 대한 정보가 들어 온다. `matches`는 특정 url 인 웹페이지에서만 실행하고 싶을때 정규식을 사용하여 표현해 줄 수 있다. `js`프로퍼티는 구동시킬 자바스크립트 파일의 위치이다.
 
 
-### popup.html
+## 2. popup.html
 ```html
 <!DOCTYPE html>
 <html lang="ko-KR">
@@ -103,7 +104,7 @@
 </br>
 </br>
 
-### popup.js
+## 3. popup.js
 ```javascript
 
 const images = Array.from(document.querySelectorAll('img'));
@@ -117,7 +118,7 @@ images.forEach((image) => image.addEventListener('click', ()=>{
 </br>
 </br>
 
-### inject.js
+## 4.inject.js
 ```javascript
 chrome.storage.local.get(["image"], async function(result) {
   if(result.image){
