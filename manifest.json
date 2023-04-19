@@ -1,0 +1,19 @@
+{
+  "manifest_version" : 3,
+  "name" : "Lolify",
+  "description": "Choose a Champion Image to set as a background for all the pages you visit",
+  "version" : "1.0",
+  "icons" : {
+    "16" : "images/cute.jpg"
+  },
+  "action" : {
+    "default_icon" : "images/cute.jpg",
+    "default_title" : "Lolify",
+    "default_popup" : "popup/popup.html"
+  },
+  "permissions" : ["storage"],
+  "content_scripts" : [{
+    "matches" : ["<all_urls>"],
+    "js" : ["script/inject.js"]
+  }]
+}
